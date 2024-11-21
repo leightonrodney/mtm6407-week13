@@ -4,7 +4,8 @@
   "info": {
     "singularName": "product",
     "pluralName": "products",
-    "displayName": "Products"
+    "displayName": "Products",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -34,16 +35,29 @@
       ]
     },
     "image": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "stock": {
       "type": "integer",
       "required": true
+    },
+    "colour": {
+      "type": "enumeration",
+      "enum": [
+        "White",
+        "Black",
+        "Red",
+        "Green",
+        "Silver",
+        "Blue",
+        "Yellow"
+      ],
+      "default": "Black"
     }
   }
 }
