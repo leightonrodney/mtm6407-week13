@@ -385,6 +385,13 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
       ['White', 'Black', 'Red', 'Green', 'Silver', 'Blue', 'Yellow']
     > &
       Schema.Attribute.DefaultTo<'Black'>;
+    content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'default';
+        }
+      >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
